@@ -5,12 +5,12 @@ from django.contrib.auth import views as auth_views
 
 from django.views.generic import TemplateView
 
-from users import urls as core_urls
+from account import urls as account_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 
-    path('', include(core_urls)),
+    path('', include(account_urls)),
 
     # Login and Logout
     path('login/', auth_views.LoginView.as_view(
