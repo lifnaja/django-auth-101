@@ -1,0 +1,3 @@
+[flake8]
+exclude = django_101/django_101/settings.py,*/migrations/*
+max-line-length = 99
