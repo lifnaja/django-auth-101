@@ -25,6 +25,10 @@ urlpatterns = [
     # Main Page
     path('', TemplateView.as_view(template_name='home.html'), name='home'),
 
+    path('signup/complete', TemplateView.as_view(
+        template_name='commons/signup-complete.html'
+    ), name='signup-complete'),
+
     # Change Password
     path(
         'change-password/',
