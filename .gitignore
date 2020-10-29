@@ -6,3 +6,5 @@
 */*/__pycache__/
 
 */__pycache__/
+
+django_101/db.sqlite3

@@ -12,6 +12,15 @@ class SignUpForm(UserCreationForm):
         help_text='Enter a valid email address'
     )
 
+    def clean_email(self):
+        email = self.cleaned_data.get("email")
+        # user = User.objects.filter(email=email).exist()
+        if User.objects.filter(email=email).exists():
+            raise forms.ValidationError(
+                    'email is exist',
+            )
+        return email
+
     class Meta:
         model = User
         fields = [
